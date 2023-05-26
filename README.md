@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Touch Typing App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Touch Typing App is a web-based application designed to help users improve their typing speed and accuracy. It provides a platform for users to practice their typing skills by displaying random words that need to be typed accurately and quickly. The app also tracks and displays various metrics, including words per minute (WPM), accuracy percentage, and a history of the user's performance for the last five attempts.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Random Word Generation: The app generates random words of varying lengths, offering a diverse typing experience for users.
+- Typing Accuracy Tracking: The app tracks the accuracy of the user's typing by comparing the typed input with the displayed words.
+- Words Per Minute (WPM) Calculation: The app calculates the user's typing speed in words per minute, providing real-time feedback on their performance.
+- Timer: A built-in timer starts when the user begins typing and stops when the entire phrase has been accurately typed, allowing for time tracking.
+- Performance History: The app keeps a record of the user's performance for the last five attempts, including WPM, accuracy, and time elapsed.
+- User-Friendly Interface: The app features a clean and intuitive interface, making it easy for users to focus on their typing practice.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository: `git clone https://github.com/riyashri07/touch_type`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Install dependencies: `npm install`
+3. Start the development server: `npm start`
+4. Open your browser and visit: `http://localhost:3000`
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React: JavaScript library for building user interfaces
+- HTML5: Markup language for structuring the app's web pages
+- CSS3: Styling language for enhancing the app's visual appearance
+- JavaScript: Programming language for adding interactivity and logic to the app
 
-### `npm run build`
+## Contributing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Contributions to the Touch Typing App are welcome and encouraged! If you have any suggestions, improvements, or bug fixes, please follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Fork the project repository.
+2. Create a new branch for your contribution: `git checkout -b feature/your-feature`
+3. Make your modifications and commit your changes: `git commit -m 'Add your feature'`
+4. Push to the branch: `git push origin feature/your-feature`
+5. Open a pull request on the original repository.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Acknowledgements
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- The developers of React, HTML5, CSS3, and JavaScript for providing powerful tools for web development.
+- The open-source community for creating and maintaining useful libraries and dependencies.
+<!-- - [OpenAI](https://openai.com) for the underlying language model that assisted in generating this README. -->
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contact
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+If you have any questions, suggestions, or feedback, please feel free to reach out:
 
-## Learn More
+- Email: riyampct7@gmail.com
+- GitHub: [riyashri07](https://github.com/riyashri07)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
