@@ -1,38 +1,53 @@
 .App {
-  text-align: center;
+    text-align: center;
+}
+* {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.random {
+    font-weight: 700;
+    font-size: 45px;
+    border-radius: 8px;
+    border: 0.5px solid #ccc;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 4px 8px;
+    width: 40vw;
+    margin: 20px auto;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type="text"] {
+    padding: 8px 12px;
+    font-weight: 600;
+    font-size: 35px;
+    width: 40vw;
+    border-radius: 8px;
+    border: 0.5px solid #ccc;
+    margin-bottom: 40px;
+}
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+table {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 0.5px solid #ccc;
+    border-radius: 8px;
+    padding: 8px 12px;
+    width: 40vw;
+    margin: 20px auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+th {
+    padding: 8px 12px;
+    border: 0.5px solid #ccc;
+    border-radius: 8px;
+    background-color: rgb(211, 156, 211);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+td {
+    padding: 8px 12px;
+    border: 0.5px solid #ccc;
+    border-radius: 8px;
 }
