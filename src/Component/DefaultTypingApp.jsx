@@ -102,8 +102,10 @@ function DefaultTypingApp() {
         setHistory(newHistory);
     };
 
+
+
     return (
-        <div>
+        <div className="app-container">
             <h1>Touch Typing App</h1>
             <p className="random">{words}</p>
             <input

@@ -4,6 +4,16 @@
 * {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.app-container {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdphRaCeIYcR4aXZINrAo8vBcoJ4L9GFjMFEwM7pt76GgViIvFJc25-amWyS6yc7K81P8&usqp=CAU');
+    background-size: cover;
+    margin: 0;
+  padding: 0;
+  height: 100vh;
+overflow-x: hidden;
+    /* Additional styles if needed */
+}
 .random {
     font-weight: 700;
     font-size: 45px;
@@ -11,8 +21,9 @@
     border: 0.5px solid #ccc;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 4px 8px;
-    width: 40vw;
+    width: 100vw;
     margin: 20px auto;
+    color: rgb(20, 80, 80);
 
 }
 
@@ -24,6 +35,7 @@ input[type="text"] {
     border-radius: 8px;
     border: 0.5px solid #ccc;
     margin-bottom: 40px;
+
 }
 input[type="text"]:focus {
     outline: none;
@@ -43,7 +55,7 @@ th {
     padding: 8px 12px;
     border: 0.5px solid #ccc;
     border-radius: 8px;
-    background-color: rgb(211, 156, 211);
+    background-color: rgb(60, 125, 125);
 }
 
 td {
