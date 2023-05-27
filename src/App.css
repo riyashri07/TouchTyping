@@ -34,7 +34,7 @@ input[type="text"] {
     width: 40vw;
     border-radius: 8px;
     border: 0.5px solid #ccc;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 
 }
 input[type="text"]:focus {
@@ -42,6 +42,17 @@ input[type="text"]:focus {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.stats{
+
+    font-size: 18px ;
+    font-weight: 500;
+}
+
+span{
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 500;
+    }
 table {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border: 0.5px solid #ccc;
@@ -56,6 +67,7 @@ th {
     border: 0.5px solid #ccc;
     border-radius: 8px;
     background-color: rgb(60, 125, 125);
+    color: white;
 }
 
 td {

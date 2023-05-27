@@ -4,25 +4,25 @@ import "../App.css";
 
 function generateWords() {
     const keys = ["a", "s", "d", "f", "j", "k", "l", ";"];
-    const numWords = Math.floor(Math.random() * 2) + 2; // generate 2-3 words
+    const numWords = Math.floor(Math.random() * 2) + 2;
     let words = "";
     for (let i = 0; i < numWords; i++) {
-        const wordLength = Math.floor(Math.random() * 3) + 3; // generate 3-5 letters per word
+        const wordLength = Math.floor(Math.random() * 3) + 3;
         for (let j = 0; j < wordLength; j++) {
             const randomIndex = Math.floor(Math.random() * keys.length);
             words += keys[randomIndex];
         }
         words += " ";
     }
-    return words.trim(); // Trim extra whitespace at the end
+    return words.trim();
 }
 
-function DefaultTypingApp() {
+function TypingApp() {
     const [words, setWords] = useState(generateWords());
     const [startTime, setStartTime] = useState(null);
     const [typedText, setTypedText] = useState("");
-    const [correctKeystrokes, setCorrectKeystrokes] = useState(0);
-    const [incorrectKeystrokes, setIncorrectKeystrokes] = useState(0);
+    const [correctKey, setCorrectKey] = useState(0);
+    const [incorrectKey, setIncorrectKey] = useState(0);
     const [isTyping, setIsTyping] = useState(false);
     const [inputColors, setInputColors] = useState([]);
     const [history, setHistory] = useState([]);
@@ -32,13 +32,12 @@ function DefaultTypingApp() {
             setStartTime(Date.now());
         }
     }, [isTyping, startTime]);
-
     useEffect(() => {
         if (typedText === words) {
             setWords(generateWords());
             setTypedText("");
-            setCorrectKeystrokes(0);
-            setIncorrectKeystrokes(0);
+            setCorrectKey(0);
+            setIncorrectKey(0);
             setStartTime(null);
             setIsTyping(false);
             setInputColors([]);
@@ -46,8 +45,8 @@ function DefaultTypingApp() {
         }
     }, [typedText, words]);
 
-    const handleInputChange = (event) => {
-        const inputText = event.target.value;
+    const handleInputChange = (e) => {
+        const inputText = e.target.value;
         setTypedText(inputText);
         setIsTyping(inputText.length > 0);
         const newInputColors = [];
@@ -56,8 +55,8 @@ function DefaultTypingApp() {
             setWords(generateWords());
             setTypedText("");
             setStartTime(null);
-            setCorrectKeystrokes(0);
-            setIncorrectKeystrokes(0);
+            setCorrectKey(0);
+            setIncorrectKey(0);
             setIsTyping(false);
             setInputColors([]);
             updateHistory();
@@ -67,10 +66,10 @@ function DefaultTypingApp() {
                 if (i < words.length) {
                     if (typedChar === words[i]) {
                         newInputColors.push("");
-                        setCorrectKeystrokes((prevCount) => prevCount + 1);
+                        setCorrectKey((prevCount) => prevCount + 1);
                     } else {
                         newInputColors.push("red");
-                        setIncorrectKeystrokes((prevCount) => prevCount + 1);
+                        setIncorrectKey((prevCount) => prevCount + 1);
                     }
                 } else {
                     newInputColors.push("red");
@@ -82,7 +81,7 @@ function DefaultTypingApp() {
     };
 
     const accuracy =
-        (correctKeystrokes / (correctKeystrokes + incorrectKeystrokes + 0.01)) *
+        (correctKey / (correctKey + incorrectKey + 0.01)) *
         100;
 
     const wpm = Math.floor(
@@ -90,19 +89,13 @@ function DefaultTypingApp() {
     );
 
     const updateHistory = () => {
-        const timestamp = new Date().toLocaleString();
-        const elapsedTime = (Date.now() - startTime) / 1000; // in seconds
-        const newHistory = [
-            ...history,
-            { wpm, accuracy, timestamp, elapsedTime },
-        ];
+        const elapsedTime = (Date.now() - startTime) / 1000;
+        const newHistory = [...history, { wpm, accuracy, elapsedTime }];
         if (newHistory.length > 5) {
             newHistory.shift();
         }
         setHistory(newHistory);
     };
-
-
 
     return (
         <div className="app-container">
@@ -117,26 +110,26 @@ function DefaultTypingApp() {
                     backgroundColor: inputColors.join(" "),
                 }}
             />
-            <Timer isTyping={isTyping} />
-            <p>Accuracy: {accuracy.toFixed(2)}%</p>
-            <p>WPM: {wpm}</p>
-            <h2>History</h2>
+            <p className="stats">
+                <Timer isTyping={isTyping} />
+            </p>
+            <p className="stats">Accuracy: {accuracy.toFixed(2)}%</p>
+            <p className="stats">WPM: {wpm}</p>
+            <h2>History <span>(recent 5 laps)</span></h2>
             <table>
                 <thead>
                     <tr>
                         <th>WPM</th>
                         <th>Accuracy</th>
                         <th> Timer</th>
-                        {/* <th>Timestamp</th> */}
                     </tr>
                 </thead>
                 <tbody>
-                    {history.map((entry, index) => (
+                    {history.map((ele, index) => (
                         <tr key={index}>
-                            <td>{entry.wpm}</td>
-                            <td>{entry.accuracy.toFixed(2)}%</td>
-                            <td>{entry.elapsedTime.toFixed(1)}s</td>
-                            {/* <td>{entry.timestamp}</td> */}
+                            <td>{ele.wpm}</td>
+                            <td>{ele.accuracy.toFixed(2)}%</td>
+                            <td>{ele.elapsedTime.toFixed(1)}s</td>
                         </tr>
                     ))}
                 </tbody>
@@ -145,4 +138,4 @@ function DefaultTypingApp() {
     );
 }
 
-export default DefaultTypingApp;
+export default TypingApp;
