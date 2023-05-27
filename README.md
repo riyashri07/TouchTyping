@@ -11,6 +11,10 @@ The Touch Typing App is a web-based application designed to help users improve t
 - Performance History: The app keeps a record of the user's performance for the last five attempts, including WPM, accuracy, and time elapsed.
 - User-Friendly Interface: The app features a clean and intuitive interface, making it easy for users to focus on their typing practice.
 
+## User Interface
+
+<img width="669" alt="Screenshot 2023-05-27 130116" src="https://github.com/riyashri07/touch_type/assets/112771413/0436de29-0ac0-4e97-8a35-62cb752cd5bd">
+
 ## Getting Started
 
 1. Clone the repository: `git clone https://github.com/riyashri07/touch_type`
