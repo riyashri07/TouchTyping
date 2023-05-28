@@ -99,7 +99,7 @@ function TypingApp() {
 
     return (
         <div className="app-container">
-            <h1>Touch Typing App</h1>
+            <h1>Typing Master</h1>
             <p className="random">{words}</p>
             <input
                 type="text"
